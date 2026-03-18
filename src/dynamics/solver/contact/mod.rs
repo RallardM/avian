@@ -1,3 +1,4 @@
+// vendor\avian\src\dynamics\solver\contact\mod.rs
 //! Constraints and other types used for solving contacts.
 
 mod normal_part;

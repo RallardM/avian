@@ -1,3 +1,4 @@
+// vendor\avian\crates\avian3d\examples\dynamic_character_3d\main.rs
 //! A basic implementation of a character controller for a dynamic rigid body.
 //!
 //! This showcases the following:

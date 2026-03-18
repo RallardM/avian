@@ -1,3 +1,4 @@
+// vendor\avian\src\collision\collider\collider_hierarchy\mod.rs
 //! [`ColliderOf`] relationships for attaching colliders to rigid bodies
 //! based on the entity hierarchy.
 

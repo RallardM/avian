@@ -1,3 +1,4 @@
+// vendor\avian\src\schedule\mod.rs
 //! Sets up the default scheduling, system set configuration, and time resources for physics.
 //!
 //! See [`PhysicsSchedulePlugin`].

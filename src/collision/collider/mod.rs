@@ -1,3 +1,4 @@
+// vendor\avian\src\collision\collider\mod.rs
 //! Components, traits, and plugins related to collider functionality.
 
 use crate::prelude::*;

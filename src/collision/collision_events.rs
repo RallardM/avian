@@ -1,3 +1,4 @@
+// vendor\avian\src\collision\collision_events.rs
 //! Collision events for detecting when colliders start or stop touching.
 //!
 //! Avian provides two collision event types:

@@ -1,3 +1,4 @@
+// vendor\avian\src\collision\narrow_phase\mod.rs
 //! Manages contacts and generates contact constraints.
 //!
 //! See [`NarrowPhasePlugin`].

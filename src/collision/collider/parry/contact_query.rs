@@ -1,3 +1,4 @@
+// vendor\avian\src\collision\collider\parry\contact_query.rs
 //! Geometric queries for computing information about contacts between two [`Collider`]s.
 //!
 //! This module contains the following contact queries:

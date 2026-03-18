@@ -1,3 +1,4 @@
+// vendor\avian\src\collision\broad_phase.rs
 //! Finds pairs of entities with overlapping [`ColliderAabb`]s to reduce
 //! the number of potential contacts for the [narrow phase](super::narrow_phase).
 //!

@@ -1,3 +1,4 @@
+// vendor\avian\src\collision\collider\backend.rs
 //! Handles generic collider backend logic, like initializing colliders and AABBs and updating related components.
 //!
 //! See [`ColliderBackendPlugin`].

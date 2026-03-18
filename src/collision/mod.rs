@@ -1,3 +1,4 @@
+// vendor\avian\src\collision\mod.rs
 //! Collision detection for [`Collider`]s.
 //!
 //! Collision detection involves determining pairs of objects that may currently be in contact

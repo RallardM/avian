@@ -1,3 +1,4 @@
+// vendor\avian\src\physics_transform\mod.rs
 //! Manages physics transforms and synchronizes them with [`Transform`].
 //!
 //! See [`PhysicsTransformPlugin`].

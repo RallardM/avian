@@ -1,3 +1,4 @@
+// vendor\avian\crates\avian3d\examples\dynamic_character_3d\plugin.rs
 use avian3d::{math::*, prelude::*};
 use bevy::{ecs::query::Has, prelude::*};
 
