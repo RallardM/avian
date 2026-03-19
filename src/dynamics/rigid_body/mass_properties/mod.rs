@@ -1,3 +1,4 @@
+// vendor\avian\src\dynamics\rigid_body\mass_properties\mod.rs
 //! Mass property functionality for [rigid bodies] and [colliders].
 //!
 //! # Overview

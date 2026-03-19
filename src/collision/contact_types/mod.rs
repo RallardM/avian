@@ -1,3 +1,4 @@
+// vendor\avian\src\collision\contact_types\mod.rs
 //! Contact types and data structures used in the collision pipeline.
 
 mod contact_graph;

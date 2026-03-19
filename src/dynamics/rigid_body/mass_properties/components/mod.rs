@@ -1,3 +1,4 @@
+// vendor\avian\src\dynamics\rigid_body\mass_properties\components\mod.rs
 //! Mass property components.
 
 use crate::prelude::*;

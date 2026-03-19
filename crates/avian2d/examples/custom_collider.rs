@@ -1,3 +1,4 @@
+// vendor\avian\crates\avian2d\examples\custom_collider.rs
 //! An example demonstrating how to make a custom collider and use it for collision detection.
 
 #![allow(clippy::unnecessary_cast)]

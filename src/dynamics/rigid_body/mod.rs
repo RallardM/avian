@@ -1,3 +1,4 @@
+// vendor\avian\src\dynamics\rigid_body\mod.rs
 //! Common components and bundles for rigid bodies.
 
 pub mod forces;
