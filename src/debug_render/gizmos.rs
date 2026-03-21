@@ -1,3 +1,5 @@
+// vendor\avian\src\debug_render\gizmos.rs
+
 #![allow(clippy::unnecessary_cast)]
 
 use crate::prelude::*;

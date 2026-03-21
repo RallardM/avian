@@ -1,3 +1,5 @@
+// vendor\avian\src\collision\collider\parry\mod.rs
+
 #![allow(clippy::unnecessary_cast)]
 
 pub mod contact_query;

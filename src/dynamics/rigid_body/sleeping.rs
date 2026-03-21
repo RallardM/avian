@@ -1,3 +1,5 @@
+// vendor\avian\src\dynamics\rigid_body\sleeping.rs
+
 //! Components and resources for [`Sleeping`] rigid bodies to reduce CPU overhead.
 //!
 //! See the [`Sleeping`] documentation for more information.

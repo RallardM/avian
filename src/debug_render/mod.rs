@@ -1,3 +1,5 @@
+// vendor\avian\src\debug_render\mod.rs
+
 //! Renders physics objects and properties for debugging purposes.
 //!
 //! See [`PhysicsDebugPlugin`].

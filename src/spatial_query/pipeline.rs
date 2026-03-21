@@ -1,3 +1,5 @@
+// vendor\avian\src\spatial_query\pipeline.rs
+
 use alloc::sync::Arc;
 
 use crate::prelude::*;

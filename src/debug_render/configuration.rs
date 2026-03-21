@@ -1,3 +1,5 @@
+// vendor\avian\src\debug_render\configuration.rs
+
 use crate::prelude::*;
 use bevy::{color::palettes::css::*, prelude::*};
 
