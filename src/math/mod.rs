@@ -47,16 +47,16 @@ pub(crate) type Ray = Ray2d;
 
 /// The ray type chosen based on the dimension.
 #[cfg(feature = "3d")]
-pub(crate) type Ray = Ray3d;
+pub type Ray = Ray3d;
 
 // Note: This is called `Dir` instead of `Direction` because Bevy has a conflicting `Direction` type.
 /// The direction type chosen based on the dimension.
 #[cfg(feature = "2d")]
-pub(crate) type Dir = Dir2;
+pub type Dir = Dir2;
 
 /// The direction type chosen based on the dimension.
 #[cfg(feature = "3d")]
-pub(crate) type Dir = Dir3;
+pub type Dir = Dir3;
 
 /// The vector type for angular values chosen based on the dimension.
 #[cfg(feature = "2d")]
@@ -605,12 +605,15 @@ pub(crate) fn make_isometry(
     parry::math::Isometry::<Scalar>::new(position.0.into(), rotation.into())
 }
 
-#[cfg(all(
-    feature = "3d",
-    feature = "default-collider",
-    any(feature = "parry-f32", feature = "parry-f64")
-))]
-pub(crate) fn make_isometry(
+/// Creates a parry isometry from a position and rotation.
+/// 
+/// # Arguments
+/// * `position` - The position to use.
+/// * `rotation` - The rotation to use.
+/// 
+/// # Returns
+/// A parry isometry with the given position and rotation.
+pub fn make_isometry(
     position: impl Into<Position>,
     rotation: impl Into<Rotation>,
 ) -> parry::math::Isometry<Scalar> {

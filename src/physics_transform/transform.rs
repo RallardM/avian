@@ -139,7 +139,7 @@ pub(crate) type RotationValue = Scalar;
 /// Quaternion
 #[cfg(feature = "3d")]
 #[allow(dead_code)]
-pub(crate) type RotationValue = Quaternion;
+pub type RotationValue = Quaternion;
 
 /// The global counterclockwise physics rotation of a [rigid body](RigidBody)
 /// or a [collider](Collider) in radians.
@@ -1114,7 +1114,8 @@ impl From<DQuat> for Rotation {
     }
 }
 
-pub(crate) fn init_physics_transform(world: &mut DeferredWorld, ctx: &HookContext) {
+/// Initializes the `Transform` and `GlobalTransform` of an entity based on its `Position` and `Rotation`,
+pub fn init_physics_transform(world: &mut DeferredWorld, ctx: &HookContext) {
     let entity_ref = world.entity(ctx.entity);
 
     // Get the global `Position` and `Rotation`.

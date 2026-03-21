@@ -25,6 +25,7 @@
 ///     // ...
 /// }
 /// ```
+#[macro_export]
 macro_rules! impl_diagnostic_paths {
     ($(#[$meta:meta])* impl $name:ident { $($path:ident: $path_str:expr,)* }) => {
         #[allow(missing_docs)]
@@ -36,4 +37,4 @@ macro_rules! impl_diagnostic_paths {
     };
 }
 
-pub(crate) use impl_diagnostic_paths;
+pub use impl_diagnostic_paths;

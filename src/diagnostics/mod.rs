@@ -66,7 +66,8 @@
 
 #[cfg(feature = "bevy_diagnostic")]
 mod entity_counters;
-mod path_macro;
+/// Diagnostics for physics spatial queries.
+pub mod path_macro;
 #[cfg(feature = "bevy_diagnostic")]
 mod total;
 
@@ -74,7 +75,7 @@ mod total;
 pub mod ui;
 #[cfg(feature = "bevy_diagnostic")]
 pub use entity_counters::{PhysicsEntityDiagnostics, PhysicsEntityDiagnosticsPlugin};
-pub(crate) use path_macro::impl_diagnostic_paths;
+pub use path_macro::impl_diagnostic_paths;
 #[cfg(feature = "bevy_diagnostic")]
 pub use total::{PhysicsTotalDiagnostics, PhysicsTotalDiagnosticsPlugin};
 

@@ -17,11 +17,17 @@ use parry::{
 
 // TODO: It'd be nice not to store so much duplicate data.
 //       Should we just query the ECS?
+/// Proxy data for a collider in the BVH structure.
+/// Stores entity, isometry, collider, and collision layers.
 #[derive(Clone)]
-pub(crate) struct BvhProxyData {
+pub struct BvhProxyData {
+    /// The entity associated with this proxy.
     pub entity: Entity,
+    /// The isometry (position and rotation) of the collider.
     pub isometry: Isometry<Scalar>,
+    /// The collider shape.
     pub collider: Collider,
+    /// The collision layers for filtering.
     pub layers: CollisionLayers,
 }
 
@@ -32,9 +38,11 @@ pub(crate) struct BvhProxyData {
 #[derive(Resource, Clone)]
 pub struct SpatialQueryPipeline {
     pub(crate) bvh: Bvh,
-    pub(crate) dispatcher: Arc<dyn QueryDispatcher>,
+    /// The dispatcher used for spatial queries.
+    pub dispatcher: Arc<dyn QueryDispatcher>,
     // TODO: Store the proxies as `Bvh` leaf data.
-    pub(crate) proxies: Vec<BvhProxyData>,
+    /// Proxy data for BVH leaves.
+    pub proxies: Vec<BvhProxyData>,
 }
 
 impl Default for SpatialQueryPipeline {
@@ -53,7 +61,8 @@ impl SpatialQueryPipeline {
         SpatialQueryPipeline::default()
     }
 
-    pub(crate) fn as_composite_shape_internal<'a>(
+    /// Returns a composite shape for custom spatial queries.
+    pub fn as_composite_shape_internal<'a>(
         &'a self,
         query_filter: &'a SpatialQueryFilter,
     ) -> QueryPipelineAsCompositeShape<'a> {
@@ -828,7 +837,10 @@ impl SpatialQueryPipeline {
     }
 }
 
-pub(crate) struct QueryPipelineAsCompositeShape<'a> {
+/// Composite shape wrapper for spatial queries in the pipeline.
+/// 
+/// Used internally to represent a filtered view of colliders for custom spatial queries.
+pub struct QueryPipelineAsCompositeShape<'a> {
     pipeline: &'a SpatialQueryPipeline,
     query_filter: &'a SpatialQueryFilter,
 }

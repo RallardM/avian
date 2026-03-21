@@ -201,8 +201,8 @@ impl Plugin for SpatialQueryPlugin {
                 (
                     update_shape_caster_positions,
                     update_spatial_query_pipeline,
-                    raycast,
-                    shapecast,
+                    // raycast,
+                    // shapecast,
                 )
                     .chain(),
             )
@@ -397,6 +397,7 @@ fn update_shape_caster_positions(
 }
 
 #[cfg(any(feature = "parry-f32", feature = "parry-f64"))]
+#[allow(unused)]
 fn raycast(
     mut rays: Query<(Entity, &mut RayCaster, &mut RayHits)>,
     spatial_query: SpatialQuery,
@@ -416,6 +417,7 @@ fn raycast(
 }
 
 #[cfg(any(feature = "parry-f32", feature = "parry-f64"))]
+#[allow(unused)]
 fn shapecast(
     mut shape_casters: Query<(Entity, &ShapeCaster, &mut ShapeHits)>,
     spatial_query: SpatialQuery,
