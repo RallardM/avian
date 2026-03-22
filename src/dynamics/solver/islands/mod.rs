@@ -210,12 +210,15 @@ impl core::fmt::Display for IslandId {
 /// [`ContactEdge`]: crate::collision::contact_types::ContactEdge
 /// [`JointGraphEdge`]: crate::dynamics::solver::joint_graph::JointGraphEdge
 #[derive(Clone, Debug, PartialEq)]
+#[allow(unused)]
 pub struct PhysicsIsland {
     pub(crate) id: IslandId,
 
-    pub(crate) head_body: Option<Entity>,
+    /// The head of the linked list of bodies in the island. The tail is stored in the island for efficient merging.
+    pub head_body: Option<Entity>,
     pub(crate) tail_body: Option<Entity>,
-    pub(crate) body_count: u32,
+    /// The number of bodies in the island. Stored for efficient sleeping and waking.
+    pub body_count: u32,
 
     pub(crate) head_contact: Option<ContactId>,
     pub(crate) tail_contact: Option<ContactId>,
@@ -226,7 +229,8 @@ pub struct PhysicsIsland {
     pub(crate) joint_count: u32,
 
     pub(crate) sleep_timer: f32,
-    pub(crate) is_sleeping: bool,
+    /// Whether the island is sleeping. This is set to `true` when the sleep timer exceeds the sleep threshold, and set to `false` when any body in the island is awake.
+    pub is_sleeping: bool,
 
     pub(crate) constraints_removed: u32,
 }
@@ -1275,7 +1279,7 @@ pub struct IslandNode<Id> {
     /// The ID of the previous node in the linked list.
     pub(crate) prev: Option<Id>,
     /// The ID of the next node in the linked list.
-    pub(crate) next: Option<Id>,
+    pub next: Option<Id>,
     /// A flag to mark the node as visited during depth-first traversal (DFS) for island splitting.
     pub(crate) is_visited: bool,
 }
