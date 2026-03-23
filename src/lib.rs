@@ -557,7 +557,8 @@ pub mod prelude {
     pub use avian_derive::*;
 }
 
-mod utils;
+pub mod utils;
+pub use utils::Instant;
 
 #[cfg(test)]
 mod tests;

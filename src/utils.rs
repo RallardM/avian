@@ -1,6 +1,6 @@
 //! Miscallaneous utility functions.
 
-pub(crate) use bevy::platform::time::Instant;
+pub use bevy::platform::time::Instant;
 
 // TODO: The single-threaded and multi-threaded versions are duplicated here because
 //       of the different trait bounds on `F`. Unify them somehow?
