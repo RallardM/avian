@@ -8,6 +8,7 @@ use-debug-plugin = []
 
 [dependencies]
 bevy = { version = "0.18.0", default-features = false, features = ["3d", "ui"] }
+# bevy = { path = "../../../../vendor/bevy", default-features = false, features = ["3d", "ui"] }
 avian3d = { path = "../avian3d", default-features = false, features = [
     "diagnostic_ui",
 ] }
